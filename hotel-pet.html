@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pet - Gerente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <div class="logo">🐾 Hotel<span>Pet</span></div>
+        <nav>
+            <a href="#dashboard">📊 Dashboard</a>
+            <a href="#reservas">📋 Reservas</a>
+            <a href="#pets">🐕 Pets</a>
+            <a href="#usuarios">👥 Usuários</a>
+            <a href="#configuracoes">⚙️ Configurações</a>
+            <a href="#perfil">👤 Perfil</a>
+        </nav>
+        <div class="logout">
+            <a href="#" onclick="alert('Logout simulado');">🚪 Sair</a>
+        </div>
+    </aside>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="main">
+
+        <header class="header">
+            <h2 id="page-title">Dashboard</h2>
+            <div class="user">
+                <span class="avatar">G</span>
+                <span>Gerente</span>
+            </div>
+        </header>
+
+        <section class="content">
+
+            <!-- ==========================================
+            PÁGINA: DASHBOARD
+            ========================================== -->
+            <div id="dashboard" class="page">
+                <div class="stats">
+                    <div class="stat-card"><div class="num">8</div><div class="label">Reservas ativas</div></div>
+                    <div class="stat-card"><div class="num">12</div><div class="label">Pets cadastrados</div></div>
+                    <div class="stat-card"><div class="num">5</div><div class="label">Usuários</div></div>
+                    <div class="stat-card"><div class="num">15</div><div class="label">Vagas livres</div></div>
+                </div>
+                <div class="card">
+                    <h3>📌 Últimas reservas</h3>
+                    <table>
+                        <thead><tr><th>Pet</th><th>Check-in</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>Thor</td><td>12/08/2026</td><td><span class="status active">Ativa</span></td></tr>
+                            <tr><td>Luna</td><td>10/08/2026</td><td><span class="status active">Ativa</span></td></tr>
+                            <tr><td>Rex</td><td>05/08/2026</td><td><span class="status completed">Finalizada</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==========================================
+            PÁGINA: RESERVAS
+            ========================================== -->
+            <div id="reservas" class="page">
+                <div class="toolbar">
+                    <input type="text" placeholder="Buscar reserva...">
+                    <button class="btn-primary">➕ Nova Reserva</button>
+                </div>
+                <div class="card">
+                    <table>
+                        <thead><tr><th>Pet</th><th>Dono</th><th>Check-in</th><th>Check-out</th><th>Status</th><th>Ações</th></tr></thead>
+                        <tbody>
+                            <tr><td>Thor</td><td>Ana Silva</td><td>12/08/2026</td><td>18/08/2026</td><td><span class="status active">Ativa</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></td></tr>
+                            <tr><td>Luna</td><td>Carlos Mendes</td><td>10/08/2026</td><td>16/08/2026</td><td><span class="status active">Ativa</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></td></tr>
+                            <tr><td>Rex</td><td>Mariana Costa</td><td>05/08/2026</td><td>09/08/2026</td><td><span class="status completed">Finalizada</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></td></tr>
+                            <tr><td>Bolt</td><td>Ana Silva</td><td>15/08/2026</td><td>20/08/2026</td><td><span class="status pending">Pendente</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==========================================
+            PÁGINA: PETS
+            ========================================== -->
+            <div id="pets" class="page">
+                <div class="toolbar">
+                    <input type="text" placeholder="Buscar pet...">
+                    <button class="btn-primary">🐾 Novo Pet</button>
+                </div>
+                <div class="card-grid">
+                    <div class="pet-card">
+                        <div class="pet-avatar">🐕</div>
+                        <h4>Thor</h4>
+                        <p>Cachorro • Grande</p>
+                        <p class="owner">Dono: Ana Silva</p>
+                        <div><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></div>
+                    </div>
+                    <div class="pet-card">
+                        <div class="pet-avatar">🐈</div>
+                        <h4>Luna</h4>
+                        <p>Gato • Médio</p>
+                        <p class="owner">Dono: Carlos Mendes</p>
+                        <div><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></div>
+                    </div>
+                    <div class="pet-card">
+                        <div class="pet-avatar">🐕</div>
+                        <h4>Rex</h4>
+                        <p>Cachorro • Médio</p>
+                        <p class="owner">Dono: Mariana Costa</p>
+                        <div><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></div>
+                    </div>
+                    <div class="pet-card">
+                        <div class="pet-avatar">🐕</div>
+                        <h4>Bolt</h4>
+                        <p>Cachorro • Grande</p>
+                        <p class="owner">Dono: Ana Silva</p>
+                        <div><button class="btn-sm">✏️</button> <button class="btn-sm">👁️</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+            PÁGINA: USUÁRIOS
+            ========================================== -->
+            <div id="usuarios" class="page">
+                <div class="toolbar">
+                    <input type="text" placeholder="Buscar usuário...">
+                    <button class="btn-primary">👤 Novo Usuário</button>
+                </div>
+                <div class="card">
+                    <table>
+                        <thead><tr><th>Nome</th><th>E-mail</th><th>Função</th><th>Status</th><th>Ações</th></tr></thead>
+                        <tbody>
+                            <tr><td>Gerente ⭐</td><td>gerente@hotelpet.com</td><td><span class="role manager">Gerente</span></td><td><span class="status active">Ativo</span></td><td><button class="btn-sm">✏️</button></td></tr>
+                            <tr><td>Ana Silva</td><td>ana@email.com</td><td><span class="role client">Cliente</span></td><td><span class="status active">Ativo</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">🔒</button></td></tr>
+                            <tr><td>Carlos Mendes</td><td>carlos@email.com</td><td><span class="role client">Cliente</span></td><td><span class="status active">Ativo</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">🔒</button></td></tr>
+                            <tr><td>Funcionário</td><td>func@hotelpet.com</td><td><span class="role employee">Funcionário</span></td><td><span class="status active">Ativo</span></td><td><button class="btn-sm">✏️</button> <button class="btn-sm">🔒</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==========================================
+            PÁGINA: CONFIGURAÇÕES
+            ========================================== -->
+            <div id="configuracoes" class="page">
+                <div class="card config-card">
+                    <h3>⚙️ Configurações do sistema</h3>
+                    <div class="form-group">
+                        <label>Valor da diária (R$)</label>
+                        <input type="number" value="120" step="5">
+                    </div>
+                    <div class="form-group">
+                        <label>Número total de vagas</label>
+                        <input type="number" value="20" step="1">
+                    </div>
+                    <button class="btn-primary">💾 Salvar</button>
+                </div>
+            </div>
+
+            <!-- ==========================================
+            PÁGINA: PERFIL
+            ========================================== -->
+            <div id="perfil" class="page">
+                <div class="card config-card">
+                    <h3>👤 Meu perfil</h3>
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" value="Gerente">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" value="gerente@hotelpet.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Nova senha</label>
+                        <input type="password" placeholder="Deixe em branco para não alterar">
+                    </div>
+                    <button class="btn-primary">💾 Atualizar</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
