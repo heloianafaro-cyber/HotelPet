@@ -104,18 +104,23 @@ body {
     overflow-y: auto;
 }
 
-/* ----- PÁGINAS (usando :target) ----- */
+/* ----- PÁGINAS (controladas pelo JS) ----- */
 .page {
-    display: none;
+    display: none; /* Todas as páginas começam escondidas */
     animation: fade 0.3s;
 }
-.page:target {
-    display: block;
+
+.page.active {
+    display: block; /* Apenas a página com a classe .active aparece */
 }
-/* Se nenhuma âncora estiver ativa, mostra dashboard */
-.content:not(:has(:target)) #dashboard {
-    display: block;
+
+/* ----- LINK ATIVO NO MENU ----- */
+.sidebar nav a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-left: 3px solid #F7C948; /* Detalhe visual opcional */
 }
+
 @keyframes fade {
     from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
