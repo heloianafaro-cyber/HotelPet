@@ -9,20 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Função que faz a troca de páginas
     function navegarPara(pageId) {
-        // Passo A: Esconder todas as páginas (remove .active de todas)
+        // Esconder todas as páginas (remove .active de todas)
         pages.forEach(page => page.classList.remove('active'));
 
-        // Passo B: Mostrar apenas a página alvo (adiciona .active)
+        // Mostrar apenas a página alvo (adiciona .active)
         const paginaAlvo = document.getElementById(pageId);
         if (paginaAlvo) {
             paginaAlvo.classList.add('active');
         }
 
-        // Passo C: Atualizar o link ativo no menu
+        // Atualizar o link ativo no menu
         navLinks.forEach(link => {
-            link.classList.remove('active'); // Remove de todos
+            link.classList.remove('active'); 
             if (link.dataset.page === pageId) {
-                link.classList.add('active'); // Adiciona só no link correspondente
+                link.classList.add('active'); 
             }
         });
     }
@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Adiciona o evento de clique em cada link do menu
     navLinks.forEach(link => {
         link.addEventListener('click', (evento) => {
-            evento.preventDefault(); // Impede o comportamento padrão do link (#)
+            evento.preventDefault(); 
 
-            const pageId = link.dataset.page; // Pega o valor de data-page
-            navegarPara(pageId); // Chama a função de troca
+            const pageId = link.dataset.page; 
+            navegarPara(pageId);
         });
     });
 
-    // 6. (Opcional) Exibe o Dashboard como página inicial ao carregar
+    // 6. Exibe o Dashboard como página inicial ao carregar
     navegarPara('dashboard');
 });
