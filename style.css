@@ -347,4 +347,12 @@ td {
     .stats {
         grid-template-columns: 1fr 1fr;
     }
+    .empty-state {
+    display: none;          /* escondido por padrão */
+    text-align: center;
+    padding: 24px;
+    color: #6B6B6B;
+    font-style: italic;
+    font-size: 14px;
+}
 }
